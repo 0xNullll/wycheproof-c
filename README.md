@@ -50,4 +50,4 @@ The parser is modular: each algorithm has its own module under `/parser/logic`.
 
 ## License and Attribution
 
-This project is licensed Apache 2.0-only, following the same license as Wycheproof itself. The original JSON test vectors, located in `/vectors`, are sourced from [Google Wycheproof](https://github.com/google/wycheproof). This repository parses these JSON files into C headers for testing purposes, while the Wycheproof vectors retain their original license and attribution.
+This project is licensed [Apache 2.0](LICENSE), following the same license as Wycheproof itself. The original JSON test vectors, located in `/vectors`, are sourced from [Google Wycheproof](https://github.com/google/wycheproof). This repository parses these JSON files into C headers for testing purposes, while the Wycheproof vectors retain their original license and attribution.
