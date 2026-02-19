@@ -1,4 +1,3 @@
-import os
 import json
 from abc import ABC, abstractmethod
 from pathlib import Path
