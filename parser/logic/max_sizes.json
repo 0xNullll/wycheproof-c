@@ -1,0 +1,61 @@
+{
+  "HMAC_SHA": {
+    "MAX_KEY": 256,
+    "MAX_MSG": 256
+  },
+  "KMAC_NO_CUSTOMIZATION": {
+    "MAX_KEY": 256,
+    "MAX_MSG": 256
+  },
+  "AES_CMAC": {
+    "MAX_KEY": 256,
+    "MAX_MSG": 256,
+    "MAX_TAG": 16
+  },
+  "AES_GMAC": {
+    "MAX_KEY": 256,
+    "MAX_IV": 16,
+    "MAX_MSG": 280,
+    "MAX_TAG": 16
+  },
+  "HKDF_SHA": {
+    "MAX_IKM": 256,
+    "MAX_SALT": 256,
+    "MAX_INFO": 256
+},
+  "PBKDF2_HMAC_SHA": {
+    "MAX_PASSWORD": 260,
+    "MAX_SALT": 256,
+    "MAX_DK": 70
+  },
+  "AES_CBC_PKCS5": {
+    "MAX_KEY": 256,
+    "MAX_MSG": 256,
+    "MAX_IV": 16,
+    "MAX_CT": 256
+  },
+  "AES_GCM": {
+    "MAX_KEY": 260,
+    "MAX_IV": 260,
+    "MAX_MSG": 540,
+    "MAX_AAD": 540,
+    "MAX_CT": 540,
+    "MAX_TAG": 16
+  },
+  "CHACHA20_POLY1305": {
+    "MAX_KEY": 32,
+    "MAX_IV": 32,
+    "MAX_AAD": 520,
+    "MAX_MSG": 520,
+    "MAX_CT": 520,
+    "MAX_TAG": 16
+  },
+  "XCHACHA20_POLY1305": {
+    "MAX_KEY": 32,
+    "MAX_IV": 32,
+    "MAX_AAD": 520,
+    "MAX_MSG": 520,
+    "MAX_CT": 520,
+    "MAX_TAG": 16
+  }
+}

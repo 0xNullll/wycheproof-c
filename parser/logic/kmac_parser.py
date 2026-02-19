@@ -1,11 +1,11 @@
 import binascii
-from .base_parser import BaseParser
+from .base_parser import BaseParser, MaxSizes
 
 class KMAC(BaseParser):
     def __init__(self, tag_size, algo_name, struct_name, array_name, **kwargs):
         super().__init__(**kwargs)  # directory_path, output_c_header, target_files
-        self.MAX_KEY = 256
-        self.MAX_MSG = 256
+        self.MAX_KEY = MaxSizes.get("KMAC", "MAX_KEY", 256)
+        self.MAX_MSG = MaxSizes.get("KMAC", "MAX_MSG", 256)
         self.MAX_TAG = tag_size
         self.algo_name = algo_name
         self.struct_name = struct_name
