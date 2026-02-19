@@ -68,7 +68,6 @@ PARSERS = [
     ("AES-GCM", aes_modes_parser.AES_GCM, ("aes_gcm",), "_test.json", "./parsed_vectors/tv_aes_gcm.h", None),
     ("ChaCha20-Poly1305", chacha20_poly1305_parser.CHACHA20_POLY1305, ("chacha20_poly1305",), "_test.json", "./parsed_vectors/tv_chacha20_poly1305.h", None),
     ("XChaCha20-Poly1305", chacha20_poly1305_parser.XCHACHA20_POLY1305, ("xchacha20_poly1305",), "_test.json", "./parsed_vectors/tv_xchacha20_poly1305.h", None),
-
 ]
 
 def parse_specific_algorithm():
