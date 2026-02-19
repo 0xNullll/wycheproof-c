@@ -73,16 +73,3 @@ class BaseParser(ABC):
         header_content += self.generate_header_end()
         self.write_header(header_content)
         print(f"Header successfully written to {self.output_c_header}")
-
-class MaxSizes:
-    MAX_SIZES = {}
-
-    @classmethod
-    def load_max_sizes(cls, json_path: str):
-        with open(json_path, 'r', encoding='utf-8') as f:
-            cls.MAX_SIZES = json.load(f)
-
-    @classmethod
-    def get(cls, algo_name: str, key: str, default=None):
-        """Get the max size for a specific algorithm."""
-        return cls.MAX_SIZES.get(algo_name, {}).get(key, default)

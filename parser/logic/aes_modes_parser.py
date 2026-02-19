@@ -1,12 +1,11 @@
 import binascii
-from .base_parser import BaseParser, MaxSizes
+from .base_parser import BaseParser
 
 class AES_CBC_PKCS5(BaseParser):
-    # dynamically set sizes from MaxSizes
-    MAX_KEY = MaxSizes.get("AES_CBC_PKCS5", "MAX_KEY", 256)
-    MAX_MSG = MaxSizes.get("AES_CBC_PKCS5", "MAX_MGS", 256)
-    MAX_IV  = MaxSizes.get("AES_CBC_PKCS5", "MAX_IV", 16)
-    MAX_CT  = MaxSizes.get("AES_CBC_PKCS5", "MAX_CT", 256)
+    MAX_KEY = 256
+    MAX_MSG = 256
+    MAX_IV  = 16
+    MAX_CT  = 256
 
     def generate_header_start(self):
         return (
@@ -83,12 +82,12 @@ class AES_CBC_PKCS5(BaseParser):
 
 
 class AES_GCM(BaseParser):
-    MAX_KEY = MaxSizes.get("AES_GCM", "MAX_KEY", 260)
-    MAX_IV  = MaxSizes.get("AES_GCM", "MAX_IV", 260)
-    MAX_MSG = MaxSizes.get("AES_GCM", "MAX_MGS", 540)
-    MAX_AAD = MaxSizes.get("AES_GCM", "MAX_AAD", 540)
-    MAX_CT  = MaxSizes.get("AES_GCM", "MAX_CT", 540)
-    MAX_TAG = MaxSizes.get("AES_GCM", "MAX_TAG", 16)
+    MAX_KEY = 260
+    MAX_IV  = 260
+    MAX_MSG = 540
+    MAX_AAD = 540
+    MAX_CT  = 540
+    MAX_TAG = 16
 
     def generate_header_start(self):
         return (

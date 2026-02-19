@@ -1,10 +1,10 @@
 import binascii
-from .base_parser import BaseParser, MaxSizes
+from .base_parser import BaseParser
 
 class AES_CMAC(BaseParser):
-    MAX_KEY = MaxSizes.get("AES_CMAC", "MAX_KEY", 256)
-    MAX_MSG = MaxSizes.get("AES_CMAC", "MAX_MSG", 256)
-    MAX_TAG = MaxSizes.get("AES_CMAC", "MAX_TAG", 16)
+    MAX_KEY = 256
+    MAX_MSG = 256
+    MAX_TAG = 16
 
     def generate_header_start(self):
         return (

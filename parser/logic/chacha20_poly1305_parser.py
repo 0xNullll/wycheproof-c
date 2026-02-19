@@ -1,17 +1,16 @@
 import binascii
-from .base_parser import BaseParser, MaxSizes
+from .base_parser import BaseParser
 
 class CHACHA20_POLY1305_BASE(BaseParser):
     def __init__(self, algo_name, struct_name, array_name, **kwargs):
         super().__init__(**kwargs)  # directory_path, output_c_header, target_files
 
-        # dynamically set sizes using MaxSizes
-        self.MAX_KEY = MaxSizes.get("CHACHA20_POLY1305", "MAX_KEY", 32)
-        self.MAX_IV  = MaxSizes.get("CHACHA20_POLY1305", "MAX_IV", 32)
-        self.MAX_AAD = MaxSizes.get("CHACHA20_POLY1305", "MAX_AAD", 520)
-        self.MAX_MSG = MaxSizes.get("CHACHA20_POLY1305", "MAX_MSG", 520)
-        self.MAX_CT  = MaxSizes.get("CHACHA20_POLY1305", "MAX_CT", 520)
-        self.MAX_TAG = MaxSizes.get("CHACHA20_POLY1305", "MAX_TAG", 16)
+        self.MAX_KEY = 32
+        self.MAX_IV  = 32
+        self.MAX_AAD = 520
+        self.MAX_MSG = 520
+        self.MAX_CT  = 520
+        self.MAX_TAG = 16
         
         self.algo_name = algo_name
         self.struct_name = struct_name

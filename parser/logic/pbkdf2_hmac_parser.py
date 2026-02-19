@@ -1,12 +1,12 @@
 import binascii
-from .base_parser import BaseParser, MaxSizes
+from .base_parser import BaseParser
 
 class PBKDF2_HMAC(BaseParser):
     def __init__(self, algo_name, struct_name, array_name, **kwargs):
         super().__init__(**kwargs)  # directory_path, output_c_header, target_files
-        self.MAX_PASSWORD = MaxSizes.get("PBKDF2_HMAC", "MAX_PASSWORD", 260)
-        self.MAX_SALT     = MaxSizes.get("PBKDF2_HMAC", "MAX_SALT", 256)
-        self.MAX_DK       = MaxSizes.get("PBKDF2_HMAC", "MAX_DK", 70)
+        self.MAX_PASSWORD = 260
+        self.MAX_SALT     = 256
+        self.MAX_DK       = 70
         self.algo_name    = algo_name
         self.struct_name  = struct_name
         self.array_name   = array_name

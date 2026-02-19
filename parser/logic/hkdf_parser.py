@@ -1,12 +1,12 @@
 import binascii
-from .base_parser import BaseParser, MaxSizes
+from .base_parser import BaseParser
 
 class HKDFSHA(BaseParser):
     def __init__(self, okm_size, algo_name, struct_name, array_name, **kwargs):
         super().__init__(**kwargs)  # directory_path, output_c_header, target_files
-        self.MAX_IKM  = MaxSizes.get("HKDF_SHA", "MAX_IKM", 256)
-        self.MAX_SALT = MaxSizes.get("HKDF_SHA", "MAX_SALT", 256)
-        self.MAX_INFO = MaxSizes.get("HKDF_SHA", "MAX_INFO", 256)
+        self.MAX_IKM     = 256
+        self.MAX_SALT    = 256
+        self.MAX_INFO    = 256
         self.MAX_OKM     = okm_size
         self.algo_name   = algo_name
         self.struct_name = struct_name
