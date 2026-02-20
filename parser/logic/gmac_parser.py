@@ -34,7 +34,7 @@ class AES_GMAC(BaseParser):
             f"    const uint8_t tag[{self.MAX_TAG}];\n"
             f"    size_t tag_len;\n"
             f"}} aes_gmac_test_vector_t;\n\n"
-            f"static const aes_gmac_test_vector_t aes_gmac_test_vector[] = {{\n"
+            f"static const aes_gmac_test_vector_t aes_gmac_test_vectors[] = {{\n"
         )
 
     def parse_test_group(self, group):

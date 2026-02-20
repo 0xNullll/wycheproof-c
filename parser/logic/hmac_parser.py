@@ -85,7 +85,7 @@ class HMAC_SHA1(HMAC_SHA):
             tag_size=20,
             algo_name="HMAC_SHA1",
             struct_name="hmac_sha1_test_vector_t",
-            array_name="hmac_sha1_vectors",
+            array_name="hmac_sha1_test_vectors",
             **kwargs
         )
 
@@ -95,7 +95,7 @@ class HMAC_SHA224(HMAC_SHA):
             tag_size=28,
             algo_name="hmac_sha224",
             struct_name="hmac_sha224_test_vector_t",
-            array_name="hmac_sha224_vectors",
+            array_name="hmac_sha224_test_vectors",
             **kwargs
         )
 
@@ -105,7 +105,7 @@ class HMAC_SHA256(HMAC_SHA):
             tag_size=32,
             algo_name="hmac_sha256",
             struct_name="hmac_sha256_test_vector_t",
-            array_name="hmac_sha256_vectors",
+            array_name="hmac_sha256_test_vectors",
             **kwargs
         )
 
@@ -115,7 +115,7 @@ class HMAC_SHA384(HMAC_SHA):
             tag_size=48,
             algo_name="hmac_sha384",
             struct_name="hmac_sha384_test_vector_t",
-            array_name="hmac_sha384_vectors",
+            array_name="hmac_sha384_test_vectors",
             **kwargs
         )
 
@@ -125,7 +125,27 @@ class HMAC_SHA512(HMAC_SHA):
             tag_size=64,
             algo_name="hmac_sha512",
             struct_name="hmac_sha512_test_vector_t",
-            array_name="hmac_sha512_vectors",
+            array_name="hmac_sha512_test_vectors",
+            **kwargs
+        )
+
+class HMAC_SHA512_224(HMAC_SHA):
+    def __init__(self, **kwargs):
+        super().__init__(
+            tag_size=28,
+            algo_name="hmac_sha512_224",
+            struct_name="hmac_sha512_224_test_vector_t",
+            array_name="hmac_sha512_224_test_vectors",
+            **kwargs
+        )
+
+class HMAC_SHA512_256(HMAC_SHA):
+    def __init__(self, **kwargs):
+        super().__init__(
+            tag_size=32,
+            algo_name="hmac_sha512_256",
+            struct_name="hmac_sha512_256_test_vector_t",
+            array_name="hmac_sha512_256_test_vectors",
             **kwargs
         )
 
@@ -145,7 +165,7 @@ class HMAC_SHA3_256(HMAC_SHA):
             tag_size=32,
             algo_name="hmac_sha3_256",
             struct_name="hmac_sha3_256_test_vector_t",
-            array_name="hmac_sha3_256_vectors",
+            array_name="hmac_sha3_256_test_vectors",
             **kwargs
         )
 
@@ -155,7 +175,7 @@ class HMAC_SHA3_384(HMAC_SHA):
             tag_size=48,
             algo_name="hmac_sha3_384",
             struct_name="hmac_sha3_384_test_vector_t",
-            array_name="hmac_sha3_384_vectors",
+            array_name="hmac_sha3_384_test_vectors",
             **kwargs
         )
 
@@ -165,6 +185,6 @@ class HMAC_SHA3_512(HMAC_SHA):
             tag_size=64,
             algo_name="hmac_sha3_512",
             struct_name="hmac_sha3_512_test_vector_t",
-            array_name="hmac_sha3_512_vectors",
+            array_name="hmac_sha3_512_test_vectors",
             **kwargs
         )

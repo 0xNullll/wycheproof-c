@@ -94,7 +94,7 @@ class HKDF_SHA1(HKDFSHA):
             okm_size=5100,
             algo_name="HKDF_SHA1",
             struct_name="hkdf_sha1_test_vector_t",
-            array_name="hkdf_sha1_vectors",
+            array_name="hkdf_sha1_test_vectors",
             **kwargs
         )
 
@@ -104,7 +104,7 @@ class HKDF_SHA256(HKDFSHA):
             okm_size=8160,
             algo_name="HKDF_SHA256",
             struct_name="hkdf_sha256_test_vector_t",
-            array_name="hkdf_sha256_vectors",
+            array_name="hkdf_sha256_test_vectors",
             **kwargs
         )
 
@@ -114,7 +114,7 @@ class HKDF_SHA384(HKDFSHA):
             okm_size=12240,
             algo_name="HKDF_SHA384",
             struct_name="hkdf_sha384_test_vector_t",
-            array_name="hkdf_sha384_vectors",
+            array_name="hkdf_sha384_test_vectors",
             **kwargs
         )
 
@@ -124,6 +124,6 @@ class HKDF_SHA512(HKDFSHA):
             okm_size=16320,
             algo_name="HKDF_SHA512",
             struct_name="hkdf_sha512_test_vector_t",
-            array_name="hkdf_sha512_vectors",
+            array_name="hkdf_sha512_test_vectors",
             **kwargs
         )

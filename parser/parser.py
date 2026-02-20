@@ -32,7 +32,10 @@ def get_target_files(directory_path, prefixes, suffix, exclusion=None):
 
     all_files = os.listdir(directory_path)
 
-    matching_files = [f for f in all_files if f.endswith(suffix) and f.startswith(prefixes)]
+    matching_files = [
+        f for f in all_files
+        if f.endswith(suffix) and any(f == p + suffix for p in prefixes)
+    ]
     if exclusion:
         matching_files = [f for f in matching_files if not any(excl in f for excl in exclusion)]
 
@@ -47,6 +50,8 @@ PARSERS = [
     ("HMAC-SHA256", hmac_parser.HMAC_SHA256, ("hmac_sha256",), "_test.json", "./parsed_vectors/tv_hmac_sha256.h", None),
     ("HMAC-SHA384", hmac_parser.HMAC_SHA384, ("hmac_sha384",), "_test.json", "./parsed_vectors/tv_hmac_sha384.h", None),
     ("HMAC-SHA512", hmac_parser.HMAC_SHA512, ("hmac_sha512",), "_test.json", "./parsed_vectors/tv_hmac_sha512.h", None),
+    ("HMAC-SHA512_224", hmac_parser.HMAC_SHA512_224, ("hmac_sha512_224",), "_test.json", "./parsed_vectors/tv_hmac_sha512_224.h", None),
+    ("HMAC-SHA512_256", hmac_parser.HMAC_SHA512_256, ("hmac_sha512_256",), "_test.json", "./parsed_vectors/tv_hmac_sha512_256.h", None),
     ("HMAC-SHA3_224", hmac_parser.HMAC_SHA3_224, ("hmac_sha3_224",), "_test.json", "./parsed_vectors/tv_hmac_sha3_224.h", None),
     ("HMAC-SHA3_256", hmac_parser.HMAC_SHA3_256, ("hmac_sha3_256",), "_test.json", "./parsed_vectors/tv_hmac_sha3_256.h", None),
     ("HMAC-SHA3_384", hmac_parser.HMAC_SHA3_384, ("hmac_sha3_384",), "_test.json", "./parsed_vectors/tv_hmac_sha3_384.h", None),

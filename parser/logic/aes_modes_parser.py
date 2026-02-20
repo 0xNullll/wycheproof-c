@@ -34,7 +34,7 @@ class AES_CBC_PKCS5(BaseParser):
             f"    const uint8_t ct[{self.MAX_CT}];\n"
             f"    size_t ct_len;\n"
             f"}} cbc_pkcs5_test_vector_t;\n\n"
-            f"static const cbc_pkcs5_test_vector_t cbc_pkcs5_vectors[] = {{\n"
+            f"static const cbc_pkcs5_test_vector_t cbc_pkcs5_test_vectors[] = {{\n"
         )
 
     def parse_test_group(self, group):
@@ -122,7 +122,7 @@ class AES_GCM(BaseParser):
             f"    const uint8_t tag[{self.MAX_TAG}];\n"
             f"    size_t tag_len;\n"
             f"}} aes_gcm_test_vector_t;\n\n"
-            f"static const aes_gcm_test_vector_t aes_gcm_vectors[] = {{\n"
+            f"static const aes_gcm_test_vector_t aes_gcm_test_vectors[] = {{\n"
         )
 
     def parse_test_group(self, group):
