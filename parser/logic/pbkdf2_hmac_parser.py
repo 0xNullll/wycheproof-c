@@ -72,8 +72,8 @@ class PBKDF2_HMAC(BaseParser):
             content.append(
                 f"    {{ {tc_id}, \"{comment}\", \"{result}\", "
                 f"{{ {flags_c} }}, {flags_len}, "
-                f"{{ {password_init} }}, {len(password_init)}, "
-                f"{{ {salt_init} }}, {len(salt_init)}, "
+                f"{{ {password_init} }}, {len(password_bytes)}, "
+                f"{{ {salt_init} }}, {len(salt_bytes)}, "
                 f"{iteration_count}, "
                 f"{{ {dk_init} }}, {dk_len} }},"
             )
@@ -86,44 +86,44 @@ class PBKDF2_HMAC(BaseParser):
 class PBKDF2_HMAC_SHA1(PBKDF2_HMAC):
     def __init__(self, **kwargs):
         super().__init__(
-            algo_name="PBKDF2_HKDF_SHA1",
-            struct_name="pbkdf2_hkdf_sha1_test_vector_t",
-            array_name="pbkdf2_hkdf_sha1_vectors",
+            algo_name="PBKDF2_HMAC_SHA1",
+            struct_name="pbkdf2_hmac_sha1_test_vector_t",
+            array_name="pbkdf2_hmac_sha1_test_vectors",
             **kwargs
         )
 
 class PBKDF2_HMAC_SHA224(PBKDF2_HMAC):
     def __init__(self, **kwargs):
         super().__init__(
-            algo_name="PBKDF2_HKDF_SHA224",
-            struct_name="pbkdf2_hkdf_sha224_test_vector_t",
-            array_name="pbkdf2_hkdf_sha224_vectors",
+            algo_name="PBKDF2_HMAC_SHA224",
+            struct_name="pbkdf2_hmac_sha224_test_vector_t",
+            array_name="pbkdf2_hmac_sha224_test_vectors",
             **kwargs
         )
 
 class PBKDF2_HMAC_SHA256(PBKDF2_HMAC):
     def __init__(self, **kwargs):
         super().__init__(
-            algo_name="PBKDF2_HKDF_SHA256",
-            struct_name="pbkdf2_hkdf_sha256_test_vector_t",
-            array_name="pbkdf2_hkdf_sha256_vectors",
+            algo_name="PBKDF2_HMAC_SHA256",
+            struct_name="pbkdf2_hmac_sha256_test_vector_t",
+            array_name="pbkdf2_hmac_sha256_test_vectors",
             **kwargs
         )
 
 class PBKDF2_HMAC_SHA384(PBKDF2_HMAC):
     def __init__(self, **kwargs):
         super().__init__(
-            algo_name="PBKDF2_HKDF_SHA384",
-            struct_name="pbkdf2_hkdf_sha384_test_vector_t",
-            array_name="pbkdf2_hkdf_sha384_vectors",
+            algo_name="PBKDF2_HMAC_SHA384",
+            struct_name="pbkdf2_hmac_sha384_test_vector_t",
+            array_name="pbkdf2_hmac_sha384_test_vectors",
             **kwargs
         )
 
 class PBKDF2_HMAC_SHA512(PBKDF2_HMAC):
     def __init__(self, **kwargs):
         super().__init__(
-            algo_name="PBKDF2_HKDF_SHA512",
-            struct_name="pbkdf2_hkdf_sha512_test_vector_t",
-            array_name="pbkdf2_hkdf_sha512_vectors",
+            algo_name="PBKDF2_HMAC_SHA512",
+            struct_name="pbkdf2_hmac_sha512_test_vector_t",
+            array_name="pbkdf2_hmac_sha512_test_vectors",
             **kwargs
         )
