@@ -77,8 +77,8 @@ class HKDFSHA(BaseParser):
             content.append(
                 f"    {{ {tc_id}, \"{comment}\", \"{result}\", "
                 f"{{ {flags_c} }}, {flags_len}, "
-                f"{{ {ikm_init} }}, {len(ikm_init)}, "
-                f"{{ {salt_init} }}, {len(salt_init)}, "
+                f"{{ {ikm_init} }}, {len(ikm_bytes)}, "
+                f"{{ {salt_init} }}, {len(salt_bytes)}, "
                 f"{{ {info_init} }}, {len(info_bytes)}, "
                 f"{{ {okm_init} }}, {okm_len} }},"
             )
