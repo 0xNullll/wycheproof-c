@@ -155,7 +155,7 @@ class HMAC_SHA3_224(HMAC_SHA):
             tag_size=28,
             algo_name="hmac_sha3_224",
             struct_name="hmac_sha3_224_test_vector_t",
-            array_name="hmac_sha3_224_vectors",
+            array_name="hmac_sha3_224_test_vectors",
             **kwargs
         )
 
