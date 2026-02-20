@@ -110,7 +110,7 @@ class CHACHA20_POLY1305(CHACHA20_POLY1305_BASE):
         super().__init__(
             algo_name="chaCha20_poly1305",
             struct_name="chacha20_poly1305_test_vector_t",
-            array_name="chacha20_poly1305_vectors",
+            array_name="chacha20_poly1305_test_vectors",
             **kwargs
         )
 
@@ -119,6 +119,6 @@ class XCHACHA20_POLY1305(CHACHA20_POLY1305_BASE):
         super().__init__(
             algo_name="xchaCha20_poly1305",
             struct_name="xchacha20_poly1305_test_vector_t",
-            array_name="xchacha20_poly1305_vectors",
+            array_name="xchacha20_poly1305_test_vectors",
             **kwargs
         )
